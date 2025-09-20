@@ -1,0 +1,33 @@
+1. accessing HPC Class Partitions on Nova
+https://research.it.iastate.edu/hpc-class#Accessing
+
+2. Launching Interactive Jobs in Class Partitions 
+https://research.it.iastate.edu/slurm#batch-vs-interactive
+
+The following command will request 1 node for 60 minutes. 
+
+> salloc -p instruction -N 1 -t 60 -A f2025.coms.5790.01
+
+If you need GPU, add
+--gres=gpu:1
+
+All students in a class registered to use the cluster are given a file storage directory with the path /work/classtmp/<username>, where <username> is the ISU NetID. You can specify the working directory for the job by adding
+-D /work/classtmp/<username>
+
+3. Set up Python virtual environments 
+https://research.it.iastate.edu/python-virtual-environments 
+
+One is already setup. You can activate it using the following command
+
+> source /work/classtmp/NLP/venv/NLP/bin/activate
+
+This will activate the virtual environment called "NLP". To deactivate, use the following command
+
+> deactivate
+
+4. Nova OnDemand
+https://nova-ondemand.its.iastate.edu/pun/sys/dashboard
+
+If you want to use the above VE in Nova OnDemand, you will need to run the following command
+
+> python -m ipykernel install --user --name "NLP"
