@@ -40,4 +40,3 @@ By the end of the course, students will be able to:
 - **Kaggle** — used for project submissions and leaderboard scoring  
 - **Python Libraries** — `scikit-learn`, `pandas`, `numpy`, `torch`, `transformers`, etc.
 
----
